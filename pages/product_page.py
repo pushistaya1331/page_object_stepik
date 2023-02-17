@@ -13,7 +13,7 @@ class ProductPage(BasePage):
     def check_product_name_in_message(self):
         name = self.browser.find_element(*ProductPageLocators.MESSAGE_PRODUCT_NAME).text
         msg_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
-        assert name  == msg_name, "Book isn't in basket"
+        assert name == msg_name, "Book isn't in basket"
 
     def check_product_price_in_message(self):
         price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
